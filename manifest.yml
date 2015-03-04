@@ -1,0 +1,14 @@
+---
+applications:
+- name: gravity-plattform-registry
+  buildpack: https://github.com/dmikusa-pivotal/cf-php-build-pack.git
+  services:
+  - graviton-registry-mongo
+  paths:
+  - composer.json
+  - composer.lock
+  - app/
+  - web/
+  memory: 256M
+  env:
+    SYMFONY_ENV: dev
