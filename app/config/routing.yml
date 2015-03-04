@@ -1,0 +1,3 @@
+graviton_routing:
+    # @todo find a way not to do this in here (Graviton itself needs to behave like a bundle)
+    resource: "../../vendor/graviton/graviton/app/config/routing.yml"
