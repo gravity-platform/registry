@@ -29,15 +29,24 @@ ECHO_CMD=`which echo`
 
 # suffix from $1 for app name
 SUFFIX=${1:-""}
+APP_NAME="${APP_NAME}${SUFFIX}"
 
 # check autodeploy
-if [[ $CF_AUTODEPLOY ]]; then
-    env;
-    exit 0;
+echo $CF_AUTODEPLOY
+if [[ $CF_AUTODEPLOY -eq true ]]; then
+    if [[ $TRAVIS_PULL_REQUEST ]]; then
+        exit 0;
+    fi
+    if [[ $TRAVIS_BRANCH == 'master' ]]; then
+        echo "Deploying prod to ${APP_NAME}"
+    elif [[ $TRAVIS_BRANCH == 'develop' ]]; then
+        APP_NAME="${APP_NAME}-${TRAVIS_BRANCH}"
+        echo "Deploying test to ${APP_NAME}"
+    else
+        echo 'Not deploying due to wrong branch'
+        exit 1;
+    fi
 fi
-
-
-APP_NAME="${APP_NAME}${SUFFIX}"
 
 cf api $CF_API
 # call behind pipe to ensure that cf login is not interactive
