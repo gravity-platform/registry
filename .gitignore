@@ -5,3 +5,4 @@ app/bootstrap.php.cache
 app/check.php
 app/SymfonyRequirements.php
 app/logs/
+deploy.local.sh
