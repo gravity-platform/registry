@@ -34,25 +34,21 @@
     },
     "scripts": {
         "post-install-cmd": [
-            "rm -rf web/explorer",
-            "cp -r vendor/libgraviton/swagger-ui/dist web/explorer",
             "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
             "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
             "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "php app/console graviton:generate:dynamicbundles",
+            "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
         ],
         "post-update-cmd": [
-            "rm -rf web/explorer",
-            "cp -r vendor/libgraviton/swagger-ui/dist web/explorer",
             "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
             "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
             "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
-            "php app/console graviton:generate:dynamicbundles",
+            "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"

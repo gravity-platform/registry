@@ -5,4 +5,3 @@ app/bootstrap.php.cache
 app/check.php
 app/SymfonyRequirements.php
 app/logs/
-web/explorer/

@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "202bab95aa02e6dd2e7c8966ab87884d",
+    "hash": "337818035f4f95cba38d262e8e2ec29b",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1399,17 +1399,17 @@
             "time": "2015-02-24 21:41:37"
         },
         {
-            "name": "graviton-plattform/registry-bundle",
+            "name": "graviton-platform/registry-bundle",
             "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/gravity-platform/GravitonRegistryBundle.git",
-                "reference": "5eaa5813003959d2b73ef98ae9174e0a5f6b1090"
+                "reference": "d3213d0035ba3251908657725c0f3867dc2565a2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/gravity-platform/GravitonRegistryBundle/zipball/5eaa5813003959d2b73ef98ae9174e0a5f6b1090",
-                "reference": "5eaa5813003959d2b73ef98ae9174e0a5f6b1090",
+                "url": "https://api.github.com/repos/gravity-platform/GravitonRegistryBundle/zipball/d3213d0035ba3251908657725c0f3867dc2565a2",
+                "reference": "d3213d0035ba3251908657725c0f3867dc2565a2",
                 "shasum": ""
             },
             "type": "library",
@@ -1423,8 +1423,8 @@
                     "email": "lucas.bickel@swisscom.com"
                 }
             ],
-            "description": "graviton bundle for the graviton plattform registry",
-            "time": "2015-03-04 20:59:25"
+            "description": "graviton bundle for the graviton-platform registry",
+            "time": "2015-03-05 00:29:52"
         },
         {
             "name": "graviton/graviton",
@@ -1432,12 +1432,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/libgraviton/graviton.git",
-                "reference": "20d4262a96c3dc33b99806f163575dfbe76f83ff"
+                "reference": "37def53affc6134d4990cc209e4352e9a524aecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libgraviton/graviton/zipball/20d4262a96c3dc33b99806f163575dfbe76f83ff",
-                "reference": "20d4262a96c3dc33b99806f163575dfbe76f83ff",
+                "url": "https://api.github.com/repos/libgraviton/graviton/zipball/37def53affc6134d4990cc209e4352e9a524aecc",
+                "reference": "37def53affc6134d4990cc209e4352e9a524aecc",
                 "shasum": ""
             },
             "require": {
@@ -1508,7 +1508,7 @@
                 }
             ],
             "description": "The base package for graviton",
-            "time": "2015-03-04 18:17:39"
+            "time": "2015-03-05 16:19:11"
         },
         {
             "name": "graviton/php-rql-parser",
@@ -2420,16 +2420,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.12.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1fbe8c2641f2b163addf49cc5e18f144bec6b19f"
+                "reference": "c41c218e239b50446fd883acb1ecfd4b770caeae"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1fbe8c2641f2b163addf49cc5e18f144bec6b19f",
-                "reference": "1fbe8c2641f2b163addf49cc5e18f144bec6b19f",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/c41c218e239b50446fd883acb1ecfd4b770caeae",
+                "reference": "c41c218e239b50446fd883acb1ecfd4b770caeae",
                 "shasum": ""
             },
             "require": {
@@ -2446,6 +2446,7 @@
                 "phpunit/phpunit": "~4.0",
                 "raven/raven": "~0.5",
                 "ruflin/elastica": "0.90.*",
+                "swiftmailer/swiftmailer": "~5.3",
                 "videlalvaro/php-amqplib": "~2.4"
             },
             "suggest": {
@@ -2462,7 +2463,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.12.x-dev"
+                    "dev-master": "1.13.x-dev"
                 }
             },
             "autoload": {
@@ -2488,7 +2489,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2014-12-29 21:29:35"
+            "time": "2015-03-05 01:12:12"
         },
         {
             "name": "php-jsonpatch/php-jsonpatch",
@@ -3511,7 +3512,7 @@
         "php-jsonpatch/php-jsonpatch": 20,
         "libgraviton/swagger-ui": 20,
         "graviton/graviton": 20,
-        "graviton-plattform/registry-bundle": 20
+        "graviton-platform/registry-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,
