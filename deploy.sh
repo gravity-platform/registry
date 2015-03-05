@@ -44,12 +44,16 @@ if [[ $CF_AUTODEPLOY == true ]]; then
     if [[ $TRAVIS_BRANCH == 'master' ]]; then
         echo "Deploying prod to ${APP_NAME}"
     elif [[ $TRAVIS_BRANCH == 'develop' ]]; then
-        APP_NAME="${APP_NAME}-${TRAVIS_BRANCH}"
-        echo "Deploying test to ${APP_NAME}"
+        echo "Deploying test to ${APP_NAME}-${TRAVIS_BRANCH}"
     else
         echo 'Not deploying due to wrong branch'
         exit 0;
     fi
+
+    # another nice hack that needs fixing at some point (i should write a buildpack extension or so)
+    sed -i '' -e "s/${APP_NAME}-mongodb/${APP_NAME}-${TRAVIS_BRANCH}-mongodb/" manifest.yml
+
+    APP_NAME="${APP_NAME}-${TRAVIS_BRANCH}"
 fi
 
 CF_CMD=`which cf`
