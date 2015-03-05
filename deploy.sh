@@ -18,6 +18,9 @@ fi
 if [[ ! $CF_ORG ]]; then
     read -p "Enter cloudfoundry ORG: " CF_ORG
 fi
+if [[ ! $CF_SPACE ]]; then
+    read -p "Enter cloudfoundry SPACE: " CF_SPACE
+fi
 if [[ ! $CF_USER ]]; then
     read -p "Enter cloudfoundry username: " CF_USER
 fi
@@ -60,7 +63,7 @@ fi
 
 $CF_CMD api $CF_API
 # call behind pipe to ensure that $CF_CMD login is not interactive
-echo '' | $CF_CMD login -u $CF_USER -p $( $ECHO_CMD -n $CF_PASS) -o $CF_ORG
+echo '' | $CF_CMD login -u $CF_USER -p $( $ECHO_CMD -n $CF_PASS) -o $CF_ORG -s $CF_SPACE
 if [[ $? -ne 0 ]]; then
     echo "Auth failed"
     echo "Exited with non-zero exit code"
