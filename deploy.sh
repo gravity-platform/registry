@@ -32,9 +32,10 @@ SUFFIX=${1:-""}
 APP_NAME="${APP_NAME}${SUFFIX}"
 
 # check autodeploy
-echo $CF_AUTODEPLOY
 if [[ $CF_AUTODEPLOY -eq true ]]; then
-    if [[ $TRAVIS_PULL_REQUEST ]]; then
+    echo "Autodeploying"
+    if [[ $TRAVIS_PULL_REQUEST -eq true ]]; then
+        echo "Aborting, pull-request detected"
         exit 0;
     fi
     if [[ $TRAVIS_BRANCH == 'master' ]]; then
@@ -44,7 +45,7 @@ if [[ $CF_AUTODEPLOY -eq true ]]; then
         echo "Deploying test to ${APP_NAME}"
     else
         echo 'Not deploying due to wrong branch'
-        exit 1;
+        exit 0;
     fi
 fi
 
@@ -54,7 +55,7 @@ echo '' | cf login -u $CF_USER -p $( $ECHO_CMD -n $CF_PASS) -o $CF_ORG
 if [[ $? -ne 0 ]]; then
     echo "Auth failed"
     echo "Exited with non-zero exit code"
-    exit;
+    exit 1;
 fi
 
 # create mongodb if it did not exist
@@ -83,9 +84,12 @@ cf push $DEPLOY_TARGET
 if [[ $? -ne 0 ]]; then
     echo "Push to ${DEPLOY_TARGET}failed"
     echo "Exited with non-zero exit code"
-    exit;
+    exit 1;
 fi
+echo "Deploy to ${DEPLOY_TARGET} was successful, remapping routes"
 cf map-route $DEPLOY_TARGET $CF_DOMAIN -n $APP_NAME
 cf unmap-route $OLD_TARGET $CF_DOMAIN -n $APP_NAME
+echo "Reaping ${OLD_TARGET}"
 cf stop $OLD_TARGET
 cf delete $OLD_TARGET -f
+echo "So Long, and Thanks for All the Fish"
