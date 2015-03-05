@@ -1,6 +1,6 @@
 {
-    "name": "gravity-plattform/registry",
-    "description": "online gravity-plattform registry",
+    "name": "gravity-platform/registry",
+    "description": "gravity-platform registry",
     "license": "GPL",
     "authors": [
         {
@@ -30,7 +30,7 @@
         "php-jsonpatch/php-jsonpatch": "1.1.*@dev",
         "libgraviton/swagger-ui": "dev-master",
         "graviton/graviton": "dev-develop",
-        "graviton-plattform/registry-bundle": "dev-develop"
+        "graviton-platform/registry-bundle": "dev-develop"
     },
     "scripts": {
         "post-install-cmd": [
