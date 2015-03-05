@@ -32,9 +32,9 @@ SUFFIX=${1:-""}
 APP_NAME="${APP_NAME}${SUFFIX}"
 
 # check autodeploy
-if [[ $CF_AUTODEPLOY -eq true ]]; then
+if [[ $CF_AUTODEPLOY == true ]]; then
     echo "Autodeploying"
-    if [[ $TRAVIS_PULL_REQUEST -eq true ]]; then
+    if [[ $TRAVIS_PULL_REQUEST == true ]]; then
         echo "Aborting, pull-request detected"
         exit 0;
     fi
@@ -49,9 +49,18 @@ if [[ $CF_AUTODEPLOY -eq true ]]; then
     fi
 fi
 
-cf api $CF_API
-# call behind pipe to ensure that cf login is not interactive
-echo '' | cf login -u $CF_USER -p $( $ECHO_CMD -n $CF_PASS) -o $CF_ORG
+CF_CMD=`which cf`
+
+if [[ $CF_CMD == '' ]]; then
+    curl -o /tmp/cf-linux-amd64.tgz http://go-cli.s3-website-us-east-1.amazonaws.com/releases/v6.10.0/cf-linux-amd64.tgz
+    tar xvf /tmp/cf-linux-amd64.tgz -C /tmp
+    echo "Using downloaded cf cli"
+    CF_CMD="/tmp/cf"
+fi
+
+$CF_CMD api $CF_API
+# call behind pipe to ensure that $CF_CMD login is not interactive
+echo '' | $CF_CMD login -u $CF_USER -p $( $ECHO_CMD -n $CF_PASS) -o $CF_ORG
 if [[ $? -ne 0 ]]; then
     echo "Auth failed"
     echo "Exited with non-zero exit code"
@@ -59,15 +68,15 @@ if [[ $? -ne 0 ]]; then
 fi
 
 # create mongodb if it did not exist
-cf cs mongodb $CF_MONGODB_TYPE "${APP_NAME}${SUFFIX}-mongodb"
+$CF_CMD cs mongodb $CF_MONGODB_TYPE "${APP_NAME}${SUFFIX}-mongodb"
 
 # push webinterface (does a green/blue deploy w/o rollback support)
-cf app "${APP_NAME}-blue"
+$CF_CMD app "${APP_NAME}-blue"
 if [[ $? -eq 0 ]]; then
     DEPLOY_TARGET="${APP_NAME}-green"
     OLD_TARGET="${APP_NAME}-blue"
 fi
-cf app "${APP_NAME}-green"
+$CF_CMD app "${APP_NAME}-green"
 if [[ $? -eq 0 ]]; then
     DEPLOY_TARGET="${APP_NAME}-blue"
     OLD_TARGET="${APP_NAME}-green"
@@ -80,16 +89,16 @@ if [[ ! $DEPLOY_TARGET ]]; then
 fi
 
 echo "Deploying API to ${DEPLOY_TARGET}"
-cf push $DEPLOY_TARGET
+$CF_CMD push $DEPLOY_TARGET
 if [[ $? -ne 0 ]]; then
     echo "Push to ${DEPLOY_TARGET}failed"
     echo "Exited with non-zero exit code"
     exit 1;
 fi
 echo "Deploy to ${DEPLOY_TARGET} was successful, remapping routes"
-cf map-route $DEPLOY_TARGET $CF_DOMAIN -n $APP_NAME
-cf unmap-route $OLD_TARGET $CF_DOMAIN -n $APP_NAME
+$CF_CMD map-route $DEPLOY_TARGET $CF_DOMAIN -n $APP_NAME
+$CF_CMD unmap-route $OLD_TARGET $CF_DOMAIN -n $APP_NAME
 echo "Reaping ${OLD_TARGET}"
-cf stop $OLD_TARGET
-cf delete $OLD_TARGET -f
+$CF_CMD stop $OLD_TARGET
+$CF_CMD delete $OLD_TARGET -f
 echo "So Long, and Thanks for All the Fish"
