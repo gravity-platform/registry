@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/env bash
 
 CF_MONGODB_TYPE="default"
 

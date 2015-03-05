@@ -7,4 +7,4 @@ php:
 script:
   - composer install --dev --no-interaction
 after_success:
-  - "sh deploy.sh"
+  - "bash deploy.sh"
