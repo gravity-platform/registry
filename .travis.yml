@@ -1,0 +1,9 @@
+language: php
+services: mongodb
+before_script:
+  - echo "extension = mongo.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+php:
+  - 5.5
+script:
+  - composer install --dev --no-interaction
+  - "bash deploy.sh"

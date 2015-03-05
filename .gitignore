@@ -1,0 +1,8 @@
+vendor/
+vendor/graviton/graviton/src/GravitonDyn/
+app/cache/
+app/bootstrap.php.cache
+app/check.php
+app/SymfonyRequirements.php
+app/logs/
+deploy.local.sh

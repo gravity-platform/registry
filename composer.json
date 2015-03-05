@@ -1,0 +1,57 @@
+{
+    "name": "gravity-platform/registry",
+    "description": "gravity-platform registry",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Lucas Bickel",
+            "email": "lucas.bickel@swisscom.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "libgraviton/swagger-ui",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/libgraviton/swagger-ui.git",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "php": "~5.4",
+        "doctrine/mongodb-odm": "~1.0@dev",
+        "doctrine/mongodb-odm-bundle": "~3.0@dev",
+        "php-jsonpointer/php-jsonpointer": "~1.1@dev",
+        "php-jsonpatch/php-jsonpatch": "1.1.*@dev",
+        "libgraviton/swagger-ui": "dev-master",
+        "graviton/graviton": "dev-develop",
+        "graviton-platform/registry-bundle": "dev-develop"
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
+            "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
+            "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+        ],
+        "post-update-cmd": [
+            "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
+            "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
+            "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
+            "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
+            "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
+        ]
+    }
+}
