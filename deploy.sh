@@ -33,6 +33,7 @@ ECHO_CMD=`which echo`
 # suffix from $1 for app name
 SUFFIX=${1:-""}
 APP_NAME="${APP_NAME}${SUFFIX}"
+APP_ROUTE="${APP_NAME}-unstable"
 
 # check autodeploy
 if [[ $CF_AUTODEPLOY == true ]]; then
@@ -41,7 +42,9 @@ if [[ $CF_AUTODEPLOY == true ]]; then
         echo "Aborting, pull-request detected"
         exit 0;
     fi
+    APP_ROUTE="${APP_NAME}-${TRAVIS_BRANCH}"
     if [[ $TRAVIS_BRANCH == 'master' ]]; then
+        APP_ROUTE=$APP_NAME
         echo "Deploying prod to ${APP_NAME}"
     elif [[ $TRAVIS_BRANCH == 'develop' ]]; then
         echo "Deploying test to ${APP_NAME}-${TRAVIS_BRANCH}"
@@ -55,6 +58,8 @@ if [[ $CF_AUTODEPLOY == true ]]; then
 
     APP_NAME="${APP_NAME}-${TRAVIS_BRANCH}"
 fi
+
+echo "Deploying at route ${APP_ROUTE}"
 
 CF_CMD=`which cf`
 
@@ -103,8 +108,8 @@ if [[ $? -ne 0 ]]; then
     exit 1;
 fi
 echo "Deploy to ${DEPLOY_TARGET} was successful, remapping routes"
-$CF_CMD map-route $DEPLOY_TARGET $CF_DOMAIN -n $APP_NAME
-$CF_CMD unmap-route $OLD_TARGET $CF_DOMAIN -n $APP_NAME
+$CF_CMD map-route $DEPLOY_TARGET $CF_DOMAIN -n $APP_ROUTE
+$CF_CMD unmap-route $OLD_TARGET $CF_DOMAIN -n $APP_ROUTE
 echo "Reaping ${OLD_TARGET}"
 $CF_CMD stop $OLD_TARGET
 $CF_CMD delete $OLD_TARGET -f
