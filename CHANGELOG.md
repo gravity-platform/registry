@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1
+
+fix ``0.1.1``
+
+* really take over [this](http://gravity-platform-registry.nova.scapp.io/ui/) with complete blue/green continuous deploy from [travis-ci](https://travis-ci.org)
+* yay, ``/me dances``
+
 ## 0.1.0
 
 First release, lots of features.
