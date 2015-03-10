@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.1
+
+* add CORS response for static swagger.json
+
 ## 0.2.0
 
 * pulls heaps of changes from graviton, no dertailed changelog since we still point to @dev
