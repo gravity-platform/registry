@@ -8,27 +8,12 @@
             "email": "lucas.bickel@swisscom.com"
         }
     ],
-    "repositories": [
-        {
-            "type": "package",
-            "package": {
-                "name": "libgraviton/swagger-ui",
-                "version": "dev-master",
-                "source": {
-                    "url": "https://github.com/libgraviton/swagger-ui.git",
-                    "type": "git",
-                    "reference": "master"
-                }
-            }
-        }
-    ],
     "require": {
         "php": "~5.4",
         "doctrine/mongodb-odm": "~1.0@dev",
         "doctrine/mongodb-odm-bundle": "~3.0@dev",
         "php-jsonpointer/php-jsonpointer": "~1.1@dev",
         "php-jsonpatch/php-jsonpatch": "1.1.*@dev",
-        "libgraviton/swagger-ui": "dev-master",
         "graviton/graviton": "dev-develop",
         "graviton-platform/registry-bundle": "dev-develop"
     },

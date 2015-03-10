@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0b04eeebbe477f2665970dd4deb40335",
+    "hash": "14a661e275ce4fbbb4e7159682534973",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2386,17 +2386,6 @@
             "time": "2014-12-12 05:04:05"
         },
         {
-            "name": "libgraviton/swagger-ui",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/libgraviton/swagger-ui.git",
-                "reference": "master"
-            },
-            "type": "library",
-            "time": "2015-02-23 16:41:36"
-        },
-        {
             "name": "misd/guzzle-bundle",
             "version": "v1.1.5",
             "source": {
@@ -3560,7 +3549,6 @@
         "doctrine/mongodb-odm-bundle": 20,
         "php-jsonpointer/php-jsonpointer": 20,
         "php-jsonpatch/php-jsonpatch": 20,
-        "libgraviton/swagger-ui": 20,
         "graviton/graviton": 20,
         "graviton-platform/registry-bundle": 20
     },
