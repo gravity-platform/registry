@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.0
+
+* pulls heaps of changes from graviton, no dertailed changelog since we still point to @dev
+
 ## 0.1.1
 
 fix ``0.1.1``

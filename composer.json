@@ -35,23 +35,32 @@
     "scripts": {
         "post-install-cmd": [
             "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
             "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
+            "Graviton\\SwaggerBundle\\Composer\\ScriptHandler::generateSwaggerJson",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
         ],
         "post-update-cmd": [
             "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
+            "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
             "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
+            "Graviton\\SwaggerBundle\\Composer\\ScriptHandler::generateSwaggerJson",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::installRequirementsFile",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles"
         ]
+    },
+    "extra": {
+        "incenteev-parameters": {
+            "file": "vendor/graviton/graviton/app/config/parameters.yml"
+        }
     }
 }
