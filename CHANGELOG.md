@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+* fix build so swagger.json contains generated resources
+
 ## 0.2.1
 
 * add CORS response for static swagger.json
