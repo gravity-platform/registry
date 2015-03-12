@@ -1,6 +1,5 @@
 {
-    "name": "gravity-platform/registry",
-    "description": "gravity-platform registry",
+    "name": "graviton/standard-edition",
     "license": "GPL",
     "authors": [
         {
@@ -14,14 +13,11 @@
         "doctrine/mongodb-odm-bundle": "~3.0@dev",
         "php-jsonpointer/php-jsonpointer": "~1.1@dev",
         "php-jsonpatch/php-jsonpatch": "1.1.*@dev",
-        "graviton/graviton": "dev-develop",
-        "graviton-platform/registry-bundle": "dev-develop"
+        "graviton/graviton": "dev-develop"
     },
     "scripts": {
         "post-install-cmd": [
             "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
-            "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
-            "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
@@ -32,8 +28,6 @@
         ],
         "post-update-cmd": [
             "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
-            "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
-            "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",

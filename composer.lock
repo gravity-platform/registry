@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0b23e0f8fc7211abe728663647270f2b",
+    "hash": "8b96db0c570e81d4a39bc342a0abc709",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -1447,34 +1447,6 @@
                 "uploadable"
             ],
             "time": "2015-02-24 21:41:37"
-        },
-        {
-            "name": "graviton-platform/registry-bundle",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/gravity-platform/GravitonRegistryBundle.git",
-                "reference": "d7644bee82d91f84138f47df2db124af2ec25aef"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/gravity-platform/GravitonRegistryBundle/zipball/d7644bee82d91f84138f47df2db124af2ec25aef",
-                "reference": "d7644bee82d91f84138f47df2db124af2ec25aef",
-                "shasum": ""
-            },
-            "type": "library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL"
-            ],
-            "authors": [
-                {
-                    "name": "Lucas Bickel",
-                    "email": "lucas.bickel@swisscom.com"
-                }
-            ],
-            "description": "graviton bundle for the gravity-platform registry",
-            "time": "2015-03-10 20:54:38"
         },
         {
             "name": "graviton/graviton",
@@ -3549,8 +3521,7 @@
         "doctrine/mongodb-odm-bundle": 20,
         "php-jsonpointer/php-jsonpointer": 20,
         "php-jsonpatch/php-jsonpatch": 20,
-        "graviton/graviton": 20,
-        "graviton-platform/registry-bundle": 20
+        "graviton/graviton": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

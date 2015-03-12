@@ -1,8 +1,10 @@
-# Gravity Registry
+# Graviton based REST Server
 
-This is two things:
-
-* An example of how to build an app with graviton
-* A registry of know public graviton instances
-
-Due to the first point it is also a bit of a smoke screen.
+```bash
+composer create-project graviton/standard-edition my-project --keep-vcs
+cd my-project
+git remote rename origin upstream
+git remote add origin <path-to-new-origin>
+composer install
+# composer require graviton/module
+```
