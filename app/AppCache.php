@@ -1,6 +1,6 @@
 <?php
 
-namespace GravitonRegistry;
+namespace GravitonStandard;
 
 require_once __DIR__.'/AppKernel.php';
 

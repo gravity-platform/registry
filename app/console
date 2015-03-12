@@ -13,7 +13,7 @@ require_once __DIR__.'/AppKernel.php';
 use Symfony\Bundle\FrameworkBundle\Console\Application;
 use Symfony\Component\Console\Input\ArgvInput;
 use Symfony\Component\Debug\Debug;
-use GravitonRegistry\AppKernel;
+use GravitonStandard\AppKernel;
 use Graviton\BundleBundle\Loader\BundleLoader;
 use Graviton\BundleBundle\GravitonBundleBundle;
 
