@@ -7,6 +7,12 @@
             "email": "lucas.bickel@swisscom.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://gravity-platform-packages-unstable.nova.scapp.io"
+        }
+    ],
     "require": {
         "php": "~5.4",
         "doctrine/mongodb-odm": "~1.0@dev",
