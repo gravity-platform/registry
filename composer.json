@@ -28,8 +28,6 @@
             "rm -rf vendor/graviton/graviton/src/GravitonDyn/"
         ],
         "post-install-cmd": [
-            "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
-            "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
@@ -42,8 +40,6 @@
             "rm -rf vendor/graviton/graviton/src/GravitonDyn/"
         ],
         "post-update-cmd": [
-            "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
-            "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",
