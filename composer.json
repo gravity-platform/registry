@@ -24,8 +24,10 @@
         "graviton-platform/registry-bundle": "dev-develop"
     },
     "scripts": {
+        "pre-install-cmd": [
+            "rm -rf vendor/graviton/graviton/src/GravitonDyn/"
+        ],
         "post-install-cmd": [
-            "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
             "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
             "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
@@ -36,8 +38,10 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
             "Graviton\\SwaggerBundle\\Composer\\ScriptHandler::generateSwaggerJson"
         ],
+        "pre-update-cmd": [
+            "rm -rf vendor/graviton/graviton/src/GravitonDyn/"
+        ],
         "post-update-cmd": [
-            "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
             "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
             "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
