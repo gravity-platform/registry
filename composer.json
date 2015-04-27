@@ -8,20 +8,26 @@
             "email": "lucas.bickel@swisscom.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://gravity-platform-packages-unstable.nova.scapp.io"
+        }
+    ],
     "require": {
         "php": "~5.4",
-        "doctrine/mongodb-odm": "~1.0@dev",
-        "doctrine/mongodb-odm-bundle": "~3.0@dev",
-        "php-jsonpointer/php-jsonpointer": "~1.1@dev",
-        "php-jsonpatch/php-jsonpatch": "1.1.*@dev",
-        "graviton/graviton": "dev-develop",
-        "graviton-platform/registry-bundle": "dev-develop"
+        "doctrine/mongodb-odm": "~1.0@beta",
+        "doctrine/mongodb-odm-bundle": "~3.0@beta",
+        "php-jsonpointer/php-jsonpointer": "~1.1@rc",
+        "php-jsonpatch/php-jsonpatch": "~1.1@rc",
+        "graviton/graviton": "^0.8",
+        "gravity-platform/registry-bundle": "^0.1"
     },
     "scripts": {
+        "pre-install-cmd": [
+            "rm -rf vendor/graviton/graviton/src/GravitonDyn/"
+        ],
         "post-install-cmd": [
-            "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
-            "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
-            "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Graviton\\GeneratorBundle\\Composer\\ScriptHandler::generateDynamicBundles",
@@ -30,10 +36,10 @@
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::removeSymfonyStandardFiles",
             "Graviton\\SwaggerBundle\\Composer\\ScriptHandler::generateSwaggerJson"
         ],
+        "pre-update-cmd": [
+            "rm -rf vendor/graviton/graviton/src/GravitonDyn/"
+        ],
         "post-update-cmd": [
-            "rm -rf vendor/graviton/graviton/src/GravitonDyn/",
-            "rm -rf vendor/graviton/graviton/resources/definition/Showcase.json",
-            "rm -rf vendor/graviton/graviton/src/Graviton/CoreBundle/Resources/definition/Module.json",
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::buildBootstrap",
             "Sensio\\Bundle\\DistributionBundle\\Composer\\ScriptHandler::clearCache",

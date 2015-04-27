@@ -3,7 +3,7 @@
  * Graviton AppKernel
  */
 
-namespace GravitonRegistry;
+namespace GravitonStandard;
 
 //@todo make this doable in graviton/graviton autoload
 require_once __DIR__.'/../vendor/graviton/graviton/app/AppKernel.php';

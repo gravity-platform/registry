@@ -15,9 +15,9 @@ $loader->register(true);
 
 require_once __DIR__.'/../app/AppCache.php';
 
-$kernel = new \GravitonRegistry\AppKernel('prod', false);
+$kernel = new \GravitonStandard\AppKernel('prod', false);
 $kernel->loadClassCache();
-$kernel = new \GravitonRegistry\AppCache($kernel);
+$kernel = new \GravitonStandard\AppCache($kernel);
 $request = Request::createFromGlobals();
 $response = $kernel->handle($request);
 $response->send();
