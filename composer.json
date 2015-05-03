@@ -15,11 +15,11 @@
     ],
     "require": {
         "php": "~5.4",
-        "doctrine/mongodb-odm": "~1.0@dev",
-        "doctrine/mongodb-odm-bundle": "~3.0@dev",
-        "php-jsonpointer/php-jsonpointer": "~1.1@dev",
-        "php-jsonpatch/php-jsonpatch": "1.1.*@dev",
-        "graviton/graviton": "dev-develop"
+        "doctrine/mongodb-odm": "~1.0@beta",
+        "doctrine/mongodb-odm-bundle": "~3.0@beta",
+        "php-jsonpointer/php-jsonpointer": "~1.1@rc",
+        "php-jsonpatch/php-jsonpatch": "~1.1@rc",
+        "graviton/graviton": "^0.8.0"
     },
     "scripts": {
         "pre-install-cmd": [
