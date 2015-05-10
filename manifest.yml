@@ -1,7 +1,7 @@
 ---
 applications:
 - name: graviton-standard-edition
-  buildpack: https://github.com/dmikusa-pivotal/cf-php-build-pack.git
+  buildpack: https://github.com/cloudfoundry/php-buildpack#v3.2.1
   services:
   - graviton-standard-edition-mongodb
   paths:
