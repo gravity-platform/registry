@@ -10,7 +10,7 @@
     "repositories": [
         {
             "type": "composer",
-            "url": "http://gravity-platform-packages-unstable.nova.scapp.io"
+            "url": "https://gravity-platform-packages-develop.nova.scapp.io"
         }
     ],
     "require": {
