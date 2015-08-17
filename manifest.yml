@@ -1,9 +1,7 @@
 ---
 applications:
-- name: gravity-platform-registry
+- name: gravity-platform-registry-unstable
   buildpack: https://github.com/dmikusa-pivotal/cf-php-build-pack.git
-  services:
-  - gravity-platform-registry-mongodb
   paths:
   - composer.json
   - composer.lock
