@@ -9,6 +9,6 @@ deploy-scripts:
   cf_space: dev
   cf_domain: 'nova.scapp.io'
   cf_services:
-    mongodb: advanced
+    mongodb: default
     atmoss3: free
   cf_environment_vars: { "ERRBIT_API_KEY": "", "ERRBIT_HOST": "errbit.nova.scapp.io" }
