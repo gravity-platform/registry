@@ -8,5 +8,4 @@ applications:
   - web/
   memory: 256M
   env:
-    SYMFONY_ENV: dev
     SYMFONY__GENERATOR__DYNAMICBUNDLES__SERVICE__WHITELIST: '["\/registry","\/core\/app"]'
