@@ -11,4 +11,4 @@ deploy-scripts:
   cf_services:
     mongodb: default
     atmoss3: free
-  cf_environment_vars: { "ERRBIT_API_KEY": "", "ERRBIT_HOST": "errbit.nova.scapp.io" }
+  cf_environment_vars: { "ERRBIT_API_KEY": "", "ERRBIT_HOST": "errbit.nova.scapp.io", "SYMFONY_ENV": "prod" }
