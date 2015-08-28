@@ -1,6 +1,7 @@
 ---
 applications:
 - name: gravity-platform-registry-unstable
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git
   paths:
   - composer.json
   - composer.lock
