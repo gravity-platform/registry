@@ -1,9 +1,7 @@
 ---
 applications:
-- name: gravity-platform-registry
-  buildpack: https://github.com/dmikusa-pivotal/cf-php-build-pack.git
-  services:
-  - gravity-platform-registry-mongodb
+- name: gravity-platform-registry-unstable
+  buildpack: https://github.com/cloudfoundry/php-buildpack.git
   paths:
   - composer.json
   - composer.lock
@@ -11,5 +9,4 @@ applications:
   - web/
   memory: 256M
   env:
-    SYMFONY_ENV: dev
     SYMFONY__GENERATOR__DYNAMICBUNDLES__SERVICE__WHITELIST: '["\/registry","\/core\/app"]'

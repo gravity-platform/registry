@@ -7,3 +7,4 @@ app/SymfonyRequirements.php
 app/logs/
 deploy.local.sh
 web/swagger.json
+app/config/deploy.yml
