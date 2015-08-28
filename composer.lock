@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c64f8eee9e8f2b591be28dd20d903114",
+    "hash": "0ba1d3c3db6a0a782dc5d96102c60f61",
     "packages": [
         {
             "name": "aws/aws-sdk-php",
@@ -158,12 +158,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/dbtlr/php-airbrake.git",
-                "reference": "0b6e6cae88a3c9c359a796091ae9a2ba40f82859"
+                "reference": "69fd4782219ba22fcfe4c278de1eebbbe38f0950"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dbtlr/php-airbrake/zipball/0b6e6cae88a3c9c359a796091ae9a2ba40f82859",
-                "reference": "0b6e6cae88a3c9c359a796091ae9a2ba40f82859",
+                "url": "https://api.github.com/repos/dbtlr/php-airbrake/zipball/69fd4782219ba22fcfe4c278de1eebbbe38f0950",
+                "reference": "69fd4782219ba22fcfe4c278de1eebbbe38f0950",
                 "shasum": ""
             },
             "require-dev": {
@@ -197,7 +197,7 @@
                 "exceptions",
                 "logging"
             ],
-            "time": "2015-07-31 17:11:23"
+            "time": "2015-08-25 15:01:23"
         },
         {
             "name": "doctrine/annotations",
@@ -1400,17 +1400,17 @@
         },
         {
             "name": "exercise/htmlpurifier-bundle",
-            "version": "v0.2.0",
+            "version": "v0.2.1",
             "target-dir": "Exercise/HTMLPurifierBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Exercise/HTMLPurifierBundle.git",
-                "reference": "0abcb08017cb254067ba39ff29f450db93516f42"
+                "reference": "9e059322d259ebdf47d113eaef565f57a9320904"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Exercise/HTMLPurifierBundle/zipball/0abcb08017cb254067ba39ff29f450db93516f42",
-                "reference": "0abcb08017cb254067ba39ff29f450db93516f42",
+                "url": "https://api.github.com/repos/Exercise/HTMLPurifierBundle/zipball/9e059322d259ebdf47d113eaef565f57a9320904",
+                "reference": "9e059322d259ebdf47d113eaef565f57a9320904",
                 "shasum": ""
             },
             "require": {
@@ -1448,7 +1448,7 @@
             "keywords": [
                 "htmlpurifier"
             ],
-            "time": "2015-08-05 07:24:55"
+            "time": "2015-08-19 13:36:46"
         },
         {
             "name": "ezyang/htmlpurifier",
@@ -1548,16 +1548,16 @@
         },
         {
             "name": "gedmo/doctrine-extensions",
-            "version": "v2.4.5",
+            "version": "v2.4.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Atlantic18/DoctrineExtensions.git",
-                "reference": "12da6e0c6ffbc7702d9f83ff12f3649a0bc5b600"
+                "reference": "5d330411e27ab0ced67e1e5383ccae975c23c17d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/12da6e0c6ffbc7702d9f83ff12f3649a0bc5b600",
-                "reference": "12da6e0c6ffbc7702d9f83ff12f3649a0bc5b600",
+                "url": "https://api.github.com/repos/Atlantic18/DoctrineExtensions/zipball/5d330411e27ab0ced67e1e5383ccae975c23c17d",
+                "reference": "5d330411e27ab0ced67e1e5383ccae975c23c17d",
                 "shasum": ""
             },
             "require": {
@@ -1623,7 +1623,7 @@
                 "tree",
                 "uploadable"
             ],
-            "time": "2015-08-11 16:33:57"
+            "time": "2015-08-28 11:07:14"
         },
         {
             "name": "graviton/deploy-scripts",
@@ -1691,16 +1691,16 @@
         },
         {
             "name": "graviton/graviton",
-            "version": "0.24.0",
+            "version": "0.25.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/libgraviton/graviton.git",
-                "reference": "df08032e011d080464090b54db2cde5a2a9803f1"
+                "reference": "5f3564ea73383d26ce586d25a763d8a73badd013"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/libgraviton/graviton/zipball/df08032e011d080464090b54db2cde5a2a9803f1",
-                "reference": "df08032e011d080464090b54db2cde5a2a9803f1",
+                "url": "https://api.github.com/repos/libgraviton/graviton/zipball/5f3564ea73383d26ce586d25a763d8a73badd013",
+                "reference": "5f3564ea73383d26ce586d25a763d8a73badd013",
                 "shasum": ""
             },
             "require": {
@@ -1799,7 +1799,7 @@
                 }
             ],
             "description": "The base package for graviton",
-            "time": "2015-08-18 16:28:25"
+            "time": "2015-08-25 19:16:27"
         },
         {
             "name": "graviton/php-rql-parser",
@@ -2031,17 +2031,17 @@
         },
         {
             "name": "hwi/oauth-bundle",
-            "version": "0.3.8",
+            "version": "0.3.9",
             "target-dir": "HWI/Bundle/OAuthBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/hwi/HWIOAuthBundle.git",
-                "reference": "faea7fa22628e310a882f7cfba8f3c8dea060c89"
+                "reference": "ff5d2e3a5af9f665cebd375777ffb8ae437d9262"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/faea7fa22628e310a882f7cfba8f3c8dea060c89",
-                "reference": "faea7fa22628e310a882f7cfba8f3c8dea060c89",
+                "url": "https://api.github.com/repos/hwi/HWIOAuthBundle/zipball/ff5d2e3a5af9f665cebd375777ffb8ae437d9262",
+                "reference": "ff5d2e3a5af9f665cebd375777ffb8ae437d9262",
                 "shasum": ""
             },
             "require": {
@@ -2051,9 +2051,12 @@
                 "symfony/options-resolver": "~2.1",
                 "symfony/security-bundle": "~2.1"
             },
+            "conflict": {
+                "twig/twig": "<1.12"
+            },
             "require-dev": {
                 "doctrine/orm": "~2.2",
-                "symfony/property-access": "~2.5",
+                "symfony/property-access": "~2.3",
                 "symfony/twig-bundle": "~2.1",
                 "symfony/validator": "~2.1"
             },
@@ -2140,7 +2143,7 @@
                 "yahoo",
                 "yandex"
             ],
-            "time": "2015-05-04 07:15:14"
+            "time": "2015-08-28 09:57:17"
         },
         {
             "name": "incenteev/composer-parameter-handler",
@@ -3266,20 +3269,23 @@
         },
         {
             "name": "phpoption/phpoption",
-            "version": "1.4.0",
+            "version": "1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/php-option.git",
-                "reference": "5d099bcf0393908bf4ad69cc47dafb785d51f7f5"
+                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/5d099bcf0393908bf4ad69cc47dafb785d51f7f5",
-                "reference": "5d099bcf0393908bf4ad69cc47dafb785d51f7f5",
+                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/94e644f7d2051a5f0fcf77d81605f152eecff0ed",
+                "reference": "94e644f7d2051a5f0fcf77d81605f152eecff0ed",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "4.7.*"
             },
             "type": "library",
             "extra": {
@@ -3298,10 +3304,8 @@
             ],
             "authors": [
                 {
-                    "name": "Johannes Schmitt",
-                    "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
-                    "role": "Developer of wrapped JMSSerializerBundle"
+                    "name": "Johannes M. Schmitt",
+                    "email": "schmittjoh@gmail.com"
                 }
             ],
             "description": "Option Type for PHP",
@@ -3311,7 +3315,7 @@
                 "php",
                 "type"
             ],
-            "time": "2014-01-09 22:37:17"
+            "time": "2015-07-25 16:39:46"
         },
         {
             "name": "psr/log",
@@ -4029,16 +4033,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v1.21.0",
+            "version": "v1.21.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "913d282caca9ee0e8d05940c6caa486d58810dd4"
+                "reference": "ca8d3aa90b6a01c82e07909fe815d6b443e75a23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/913d282caca9ee0e8d05940c6caa486d58810dd4",
-                "reference": "913d282caca9ee0e8d05940c6caa486d58810dd4",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/ca8d3aa90b6a01c82e07909fe815d6b443e75a23",
+                "reference": "ca8d3aa90b6a01c82e07909fe815d6b443e75a23",
                 "shasum": ""
             },
             "require": {
@@ -4086,7 +4090,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2015-08-24 09:51:18"
+            "time": "2015-08-26 08:58:31"
         },
         {
             "name": "xiag/rql-parser",
